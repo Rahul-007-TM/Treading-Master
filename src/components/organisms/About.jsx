@@ -5,7 +5,7 @@ const About = () => {
         <div className="flex w-full h-auto md:items-center md:justify-center md:h-full md:min-h-[720px] md:max-h-[800px]">
             <div className="flex flex-col w-full max-w-7xl mx-auto px-4 gap-6 py-8 md:py-12 lg:py-16">
                 <div className="flex w-full">
-                    <h2 className="flex text-3xl lg:text-4xl items-center justify-center font-bold w-full">
+                    <h2 className="flex text-2xl md:text-3xl  lg:text-4xl items-center justify-center font-bold w-full">
                         About our company
                     </h2>
                 </div>
