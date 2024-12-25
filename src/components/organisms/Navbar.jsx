@@ -1,8 +1,8 @@
 import { Menu } from "lucide-react"
 import Link from "next/link"
 import Marquee from "../atoms/Marquee"
-import { Button } from "../button"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../sheet"
+import { Button } from "../ui/button"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"
 
 const Navbar = () => {
     return (

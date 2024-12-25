@@ -1,4 +1,4 @@
-import Hero from "@/components/ui/organisms/Hero";
+import Hero from "@/components/organisms/Hero";
 
 export default function Home() {
     return (

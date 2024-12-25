@@ -5,10 +5,10 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import Loading from "../atoms/Loading"
-import { Button } from "../button"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../form"
-import { Input } from "../input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../select"
+import { Button } from "../ui/button"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form"
+import { Input } from "../ui/input"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 
 const FormSchema = z.object({
     fullname: z

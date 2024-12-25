@@ -1,7 +1,7 @@
-import { Button } from "../button"
-import { Card, CardContent, CardHeader, CardTitle } from "../card"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../dialog"
 import LeadForm from "../molecules/LeadForm"
+import { Button } from "../ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog"
 
 const Hero = () => {
     return (
