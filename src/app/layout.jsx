@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
                 className={`${poppins.variable} antialiased h-screen w-screen overflow-hidden font-poppins`}
             >
                 <Navbar />
-                <main className="flex w-full h-[calc(100%-48px)] overflow-y-auto">
+                <main className="flex w-full h-[calc(100%-80px)] overflow-y-auto">
                     <div className="flex w-full flex-col">
                         {children}
                     </div>

@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react"
 import Link from "next/link"
+import Marquee from "../atoms/Marquee"
 import { Button } from "../button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../sheet"
 
@@ -54,6 +55,11 @@ const Navbar = () => {
                         </Sheet>
                     </div>
                 </div>
+            </div>
+            <div className="flex w-full bg-primary">
+                <Marquee className="text-secondary py-1 [--duration:120s]">
+                    Trading stocks, options, and other financial instruments involves substantial risk and may not be suitable for all investors. Past performance is not indicative of future results. Please consider your investment objectives, financial situation, and risk tolerance before trading. Seek advice from a licensed financial advisor if needed. We do not guarantee any profits or provide investment advice. All information on this website is for educational purposes only.
+                </Marquee>
             </div>
         </div>
     )
