@@ -80,5 +80,4 @@ const NavItems = [
         label: "Contact Us",
         link: "/contact-us"
     },
-
 ]

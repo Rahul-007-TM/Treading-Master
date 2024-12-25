@@ -1,9 +1,9 @@
 
 const CompanyThoughts = () => {
     return (
-        <div className="flex w-full">
-            <div className="flex w-full max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 lg:py-16 rounded-3xl bg-primary">
-                <div className="flex w-full gap-8 text-white flex-col">
+        <div className="flex w-full lg:py-16">
+            <div className="flex w-full max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12 lg:py-16 rounded-3xl bg-secondary">
+                <div className="flex w-full gap-8 flex-col">
                     <p className="text-sm md:text-base flex flex-col gap-2">
                         <span className="font-bold text-base md:text-lg">Dear Trader,</span>
                         <span>Greetings from [Your Trading Company Name]!</span>

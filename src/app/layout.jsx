@@ -1,3 +1,4 @@
+import Footer from "@/components/organisms/Footer";
 import Navbar from "@/components/organisms/Navbar";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
                 <main className="flex w-full h-[calc(100%-80px)] overflow-y-auto">
                     <div className="flex w-full h-fit flex-col">
                         {children}
+                        <Footer />
                     </div>
                 </main>
             </body>
