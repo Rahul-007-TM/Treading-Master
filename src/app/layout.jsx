@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
             >
                 <Navbar />
                 <main className="flex w-full h-[calc(100%-80px)] overflow-y-auto">
-                    <div className="flex w-full flex-col">
+                    <div className="flex w-full h-fit flex-col">
                         {children}
                     </div>
                 </main>
