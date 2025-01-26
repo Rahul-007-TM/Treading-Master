@@ -1,46 +1,96 @@
-import Link from "next/link"
+import Link from "next/link";
 
 const Footer = () => {
     return (
         <>
-            <div className="flex w-full bg-primary">
-                <div className="flex text-white flex-col w-full max-w-7xl items-center justify-center mx-auto px-4 gap-6  py-8 md:py-12 lg:py-16">
-                    <span className="text-4xl font-bold">LOGO</span>
-                    <ul className="flex w-fit gap-4">
-                        {NavItems.map((item, i) => (
-                            <li key={i} className="w-fit">
-                                <Link
-                                    href={item.link}
-                                    variant="ghost"
-                                    className="px-4 py-2"
-                                >
-                                    {item.label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+            <div className="flex w-full bg-neutral-900">
+                <div className="flex text-white flex-col w-full max-w-7xl items-center justify-center mx-auto px-4 gap-6 lg:gap-8 xl:gap-10 py-8 md:py-12 lg:py-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-full gap-6 max-w-7xl mx-auto">
+                        <div className="flex w-full col-span-2">
+                            <span className="text-4xl font-bold">LOGO</span>
+                        </div>
+                        <div className="flex flex-col gap-4 w-full">
+                            <span className="text-lg text-primary">
+                                Our Packages
+                            </span>
+                            <ul className="flex flex-col w-fit gap-4">
+                                {NavItems[0].data.map((item, i) => (
+                                    <li key={i} className="w-fit">
+                                        <Link
+                                            href={item.link}
+                                            variant="ghost"
+                                            className="px-4 py-2"
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="flex flex-col gap-4 w-full">
+                            <span className="text-lg text-primary">
+                                Quick Links
+                            </span>
+                            <ul className="flex flex-col w-fit gap-4">
+                                {NavItems[1].data.map((item, i) => (
+                                    <li key={i} className="w-fit">
+                                        <Link
+                                            href={item.link}
+                                            variant="ghost"
+                                            className="px-4 py-2"
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                     <p className="text-center text-sm/6">
-                        &copy; 2024 Your Company, Inc. All rights reserved.
+                        &copy; {new Date().getFullYear()} Your Company, Inc. All
+                        rights reserved.
                     </p>
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
 
 const NavItems = [
     {
-        label: "Home",
-        link: "/"
+        label: "Our Package",
+        data: [
+            {
+                label: "Equity Market Package",
+                link: "/package/equity-market-package",
+            },
+            {
+                label: "Index Option Basic",
+                link: "/package/index-option-basic",
+            },
+            {
+                label: "Index Option Premium",
+                link: "/package/index-option-premium",
+            },
+            {
+                label: "HNI Index Option",
+                link: "/package/hni-index-option",
+            },
+        ],
     },
     {
-        label: "Package",
-        link: "/package"
+        label: "Quick Links",
+        data: [
+            {
+                label: "Home",
+                link: "/",
+            },
+            {
+                label: "Contact Us",
+                link: "/contact-us",
+            },
+        ],
     },
-    {
-        label: "Contact Us",
-        link: "/contact-us"
-    },
-]
+];
