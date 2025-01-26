@@ -2,12 +2,13 @@ import Footer from "@/components/organisms/Footer";
 import Navbar from "@/components/organisms/Navbar";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
     variable: "--font-poppins",
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    subsets: ["latin"]
-})
+    subsets: ["latin"],
+});
 
 export const metadata = {
     title: "Create Next App",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
                         <Footer />
                     </div>
                 </main>
+                <Toaster richColors />
             </body>
         </html>
     );
