@@ -1,5 +1,6 @@
 import NotFound from "@/app/not-found";
 import SectionHeading from "@/components/atoms/SectionHeading";
+import LeadForm from "@/components/molecules/LeadForm";
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -8,10 +9,17 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
 import { ChartAreaIcon } from "lucide-react";
+import { Check } from "lucide-react";
 import { Calendar1 } from "lucide-react";
 import { IndianRupeeIcon } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 
 const page = async ({ params }) => {
@@ -63,21 +71,51 @@ const page = async ({ params }) => {
                                             {plan.service ? (
                                                 <div className="flex flex-wrap w-full">
                                                     <span className="text-primary flex w-fit items-center font-semibold">
-                                                        <ChartAreaIcon className="size-4" />
-                                                        &nbsp; Service:
+                                                        <Check className="size-4" />
+                                                        {/* &nbsp; Service: */}
                                                     </span>
                                                     &nbsp;
                                                     {plan.service}
                                                 </div>
                                             ) : null}
+                                            {plan.details ? (
+                                                <ul className="flex flex-col gap-3 flex-wrap w-full">
+                                                    {plan.details.map(
+                                                        (detail, i) => (
+                                                            <li
+                                                                key={i}
+                                                                className="flex w-full gap-1 text-sm md:text-base"
+                                                            >
+                                                                <span className="w-4 pt-1 text-primary">
+                                                                    <Check className="size-4" />{" "}
+                                                                </span>
+                                                                <span>
+                                                                    {detail}
+                                                                </span>
+                                                            </li>
+                                                        )
+                                                    )}
+                                                </ul>
+                                            ) : null}
                                         </div>
                                     </CardContent>
                                     <CardFooter className="flex flex-grow-0">
-                                        <Button asChild className="w-full">
-                                            <Link href={"/contact-us"}>
-                                                Contact Now
-                                            </Link>
-                                        </Button>
+                                        <Dialog>
+                                            <DialogTrigger asChild>
+                                                <Button className="w-full">
+                                                    Contact Now
+                                                </Button>
+                                            </DialogTrigger>
+                                            <DialogContent className="max-w-sm">
+                                                <DialogHeader>
+                                                    <DialogTitle>
+                                                        Fill Details to contact
+                                                        us
+                                                    </DialogTitle>
+                                                </DialogHeader>
+                                                <LeadForm />
+                                            </DialogContent>
+                                        </Dialog>
                                     </CardFooter>
                                 </Card>
                             ))}
@@ -111,42 +149,69 @@ const Packages = [
                 label: "Quarterly Plan",
                 price: "48,000",
                 validity: "1 Quarter",
-                service: "* 1 Research Alert Per Day",
+                service: "Get 1 Research Alert Per Day",
+                details: [
+                    "Each alert is detailed with entry levels, target prices, ongoing monitoring, and stop-loss instructions.",
+                    "Real-time market customer support and continuous follow-up on trade alerts",
+                    "Receive exclusive research alerts on top-performing stocks.",
+                    "Global market & Economy Trend data update",
+                    "Accuracy upto 85%",
+                ],
             },
             {
                 label: "Yearly Plan",
                 price: "1,35,000",
                 validity: "1 Year",
+                service: "Get 1 Research Alert Per Day",
+                details: [
+                    "Each alert is detailed with entry levels, target prices, ongoing monitoring, and stop-loss instructions.",
+                    "Real-time market customer support and continuous follow-up on trade alerts",
+                    "Receive exclusive research alerts on top-performing stocks.",
+                    "Global market & Economy Trend data update",
+                    "Accuracy upto 85%",
+                ],
             },
         ],
     },
     {
-        label: "Index Option Basic Packages",
-        link: "index-option-basic",
+        label: "Basic Index Option Packages",
+        link: "basic-index-option",
         data: [
             {
                 label: "Starter Plan",
                 price: "25,000",
                 validity: "1 Month Validity",
-                service: "1-2 Per day Trade",
+                details: [
+                    "1-2 Intraday tips with proper target & stop loss",
+                    "Real-time market customer support and continuous follow-up on trade alerts",
+                    "Receive one daily research alert for BankNifty/Nifty bank options.",
+                ],
             },
             {
                 label: "Pro Plan",
                 price: "75,800",
                 validity: "3 Month Validity",
-                service: "2-3 Per day Trade",
+                details: [
+                    "2-3 Intraday tips with proper target & stop loss",
+                    "Real-time market customer support and continuous follow-up on trade alerts",
+                    "Receive one daily research alert for BankNifty/Nifty bank options.",
+                ],
             },
             {
                 label: "Master Plan",
                 price: "1,50,600",
                 validity: "6 Month Validity",
-                service: "4-5 Per day Trade",
+                details: [
+                    "4-5 Intraday tips with proper target & stop loss",
+                    "Real-time market customer support and continuous follow-up on trade alerts",
+                    "Receive one daily research alert for BankNifty/Nifty bank options.",
+                ],
             },
         ],
     },
     {
-        label: "Index Option Premium Packages",
-        link: "index-option-premium",
+        label: "Premium Index Option Packages",
+        link: "premium-index-option",
         data: [
             {
                 label: "Starter Plan",

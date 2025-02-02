@@ -2,6 +2,7 @@
 
 const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"
 const apiUrl = baseUrl + "/api/leads";
+const mailUrl = baseUrl + "/api/mail";
 
 export const createLead = async ({ fullname, mobile, email, state }) => {
     try {
@@ -13,6 +14,13 @@ export const createLead = async ({ fullname, mobile, email, state }) => {
             body: JSON.stringify({ fullname, mobile, email, state }),
         });
         const responseData = await res.json();
+        await fetch(mailUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ fullname, mobile, email, state }),
+        });
         return responseData;
     } catch (error) {
         console.error("Failed to add Lead:", error);

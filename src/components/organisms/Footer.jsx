@@ -13,7 +13,7 @@ const Footer = () => {
                             <span className="text-lg text-primary">
                                 Our Packages
                             </span>
-                            <ul className="flex flex-col w-fit gap-4">
+                            <ul className="flex flex-col w-fit gap-1">
                                 {NavItems[0].data.map((item, i) => (
                                     <li key={i} className="w-fit">
                                         <Link
@@ -31,7 +31,7 @@ const Footer = () => {
                             <span className="text-lg text-primary">
                                 Quick Links
                             </span>
-                            <ul className="flex flex-col w-fit gap-4">
+                            <ul className="flex flex-col w-fit gap-1">
                                 {NavItems[1].data.map((item, i) => (
                                     <li key={i} className="w-fit">
                                         <Link
@@ -67,12 +67,12 @@ const NavItems = [
                 link: "/package/equity-market-package",
             },
             {
-                label: "Index Option Basic",
-                link: "/package/index-option-basic",
+                label: "Basic Index Option",
+                link: "/package/basic-index-option",
             },
             {
-                label: "Index Option Premium",
-                link: "/package/index-option-premium",
+                label: "Premium Index Option",
+                link: "/package/premium-index-option",
             },
             {
                 label: "HNI Index Option",

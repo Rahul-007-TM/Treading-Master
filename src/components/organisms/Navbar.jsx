@@ -140,7 +140,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="flex w-full bg-primary">
-                <Marquee className="text-secondary py-1 [--duration:120s]">
+                <Marquee className="text-secondary py-1 [--duration:120s] text-black">
                     Trading stocks, options, and other financial instruments
                     involves substantial risk and may not be suitable for all
                     investors. Past performance is not indicative of future
@@ -172,12 +172,12 @@ const NavItems = [
                 link: "/package/equity-market-package",
             },
             {
-                label: "Index Option Basic",
-                link: "/package/index-option-basic",
+                label: "Basic Index Option",
+                link: "/package/basic-index-option",
             },
             {
-                label: "Index Option Premium",
-                link: "/package/index-option-premium",
+                label: "Premium Index Option",
+                link: "/package/premium-index-option",
             },
             {
                 label: "HNI Index Option",
