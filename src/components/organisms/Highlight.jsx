@@ -9,7 +9,10 @@ const Highlight = () => {
                 <SectionHeading title="9 Golden rules for Trading in Stock Market" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                     {Highlights.map((highlight, i) => (
-                        <Card key={i}>
+                        <Card
+                            key={i}
+                            className="hover:border-green-500 transition-all delay-200"
+                        >
                             <CardContent>
                                 <div className="flex relative aspect-video w-full">
                                     <Image
