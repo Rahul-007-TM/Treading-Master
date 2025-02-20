@@ -1,3 +1,5 @@
+"use client";
+
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import Marquee from "../atoms/Marquee";
@@ -16,8 +18,11 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "../ui/accordion";
+import { useState } from "react";
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <div className="w-full">
             <div className="flex gap-4 w-full mx-auto max-w-7xl px-4 py-1">
@@ -64,9 +69,12 @@ const Navbar = () => {
                         )}
                     </ul>
                     <div className="flex md:hidden w-fit">
-                        <Sheet>
+                        <Sheet open={open} onOpenChange={setOpen}>
                             <SheetTrigger asChild>
-                                <Button variant="icon">
+                                <Button
+                                    onClick={() => setOpen(true)}
+                                    variant="icon"
+                                >
                                     <Menu />
                                 </Button>
                             </SheetTrigger>
@@ -107,6 +115,11 @@ const Navbar = () => {
                                                                                 href={
                                                                                     item.link
                                                                                 }
+                                                                                onClick={() =>
+                                                                                    setOpen(
+                                                                                        false
+                                                                                    )
+                                                                                }
                                                                                 className="px-4 py-1.5 text-sm"
                                                                             >
                                                                                 {
@@ -124,6 +137,9 @@ const Navbar = () => {
                                                 <li key={i} className="w-fit">
                                                     <Link
                                                         href={item.link}
+                                                        onClick={() =>
+                                                            setOpen(false)
+                                                        }
                                                         variant="ghost"
                                                         className="py-2"
                                                     >
