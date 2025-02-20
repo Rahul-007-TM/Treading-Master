@@ -119,7 +119,7 @@ const page = async ({ params }) => {
                                 </Card>
                             ))}
                         </div>
-                        <div className="flex w-full">
+                        {/* <div className="flex w-full">
                             <p className="text-sm md:text-base md:text-center w-full">
                                 Get premium research alert in the best stock
                                 Live Market Customer Support is available global
@@ -127,7 +127,7 @@ const page = async ({ params }) => {
                                 - 95% Expairy Special Stratefy BTST / STBT
                                 Trades
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             ) : (
@@ -196,7 +196,7 @@ const Packages = [
                 details: [
                     "2-3 Intraday tips with proper target & stop loss",
                     "Real-time market customer support and continuous follow-up on trade alerts",
-                    "Receive one daily research alert for Banknifty/Niftybank",
+                    "Receive one to two daily research alert for Banknifty/Niftybank",
                     "Global market & economy trend data update",
                     "Get real-time trading calls and market updates through our WhatsApp broadcast service",
                     "Trending stocks, RBI Announcement, IIP & CPI updates",
@@ -209,7 +209,7 @@ const Packages = [
                 details: [
                     "4-5 Intraday tips with proper target & stop loss",
                     "Real-time market customer support and continuous follow-up on trade alerts",
-                    "Receive one daily research alert for Banknifty/Niftybank",
+                    "Receive two to three daily research alert for Banknifty/Niftybank",
                     "Global market & economy trend data update",
                     "Get real-time trading calls and market updates through our WhatsApp broadcast service",
                     "Trending stocks, RBI Announcement, IIP & CPI updates",
@@ -238,7 +238,7 @@ const Packages = [
                 price: "1,48,200",
                 validity: "3 Month Validity",
                 details: [
-                    "Receive one daily research alert for Banknifty/Nifty bank options",
+                    "Receive one to two daily research alert for Banknifty/Nifty bank options",
                     "Receive weekly 2-3 research alerts on Fin-Nifty & Sensex",
                     "Receive expiry special research alerts on all weekly expiries",
                     "Proper live market executive support with online support via WhatsApp and calls",
@@ -250,7 +250,7 @@ const Packages = [
                 price: "2,96,400",
                 validity: "6 Month Validity",
                 details: [
-                    "Receive one daily research alert for Banknifty/Nifty bank options",
+                    "Receive two to three daily research alert for Banknifty/Nifty bank options",
                     "Receive weekly 2-3 research alerts on Fin-Nifty & Sensex",
                     "Receive expiry special research alerts on all weekly expiries",
                     "Proper live market executive support with online support via WhatsApp and calls",
@@ -286,11 +286,11 @@ const Packages = [
                 price: "3,41,750",
                 validity: "3 Month Validity",
                 details: [
-                    "Receive two to three research alerts each day via WhatsApp and broadcast",
-                    "Receive one to two daily research alerts for Banknifty/Nifty bank options",
-                    "Receive weekly one to two research alerts on Finnifty, Mid-cap Nifty & Sensex",
+                    "Receive three to four research alerts each day via WhatsApp and broadcast",
+                    "Receive three to four daily research alerts for Banknifty/Nifty bank options",
+                    "Receive weekly three to four research alerts on Finnifty, Mid-cap Nifty & Sensex",
                     "Receive BTST/STBT trade research alerts",
-                    "Receive one or two exclusive commodity research alerts every week",
+                    "Receive three or four exclusive commodity research alerts every week",
                     "Receive expiry special research alerts on all weekly expiries",
                     "Get expertly researched targets and stop-loss levels with every research alert",
                     "Get proper live market executive support",
@@ -304,11 +304,11 @@ const Packages = [
                 price: "6,83,500",
                 validity: "6 Month Validity",
                 details: [
-                    "Receive two to three research alerts each day via WhatsApp and broadcast",
-                    "Receive one to two daily research alerts for Banknifty/Nifty bank options",
-                    "Receive weekly one to two research alerts on Finnifty, Mid-cap Nifty & Sensex",
+                    "Receive four to five research alerts each day via WhatsApp and broadcast",
+                    "Receive four to five daily research alerts for Banknifty/Nifty bank options",
+                    "Receive weekly four to five research alerts on Finnifty, Mid-cap Nifty & Sensex",
                     "Receive BTST/STBT trade research alerts",
-                    "Receive one or two exclusive commodity research alerts every week",
+                    "Receive four or five exclusive commodity research alerts every week",
                     "Receive expiry special research alerts on all weekly expiries",
                     "Get expertly researched targets and stop-loss levels with every research alert",
                     "Get proper live market executive support",
