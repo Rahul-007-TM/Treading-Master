@@ -14,15 +14,15 @@ import {
 const Hero = () => {
     return (
         <>
-            <div className="flex relative w-full h-fit md:h-full md:min-h-[720px] md:max-h-[800px] before:flex before:absolute before:md:w-2/5 before:h-80 before:md:h-full before:contain-content before:bg-primary before:md:rounded-l-full before:md:top-0 before:md:right-0 after:flex after:absolute after:h-full after:w-full after:z-10 after:backdrop-blur-sm">
+            <div className="flex relative w-full h-fit md:h-full md:min-h-[620px] md:max-h-[700px]  lg:min-h-[720px] lg:max-h-[800px] before:flex before:absolute before:md:w-2/5 before:h-80 before:md:h-full before:contain-content before:bg-primary before:md:rounded-l-full before:md:top-0 before:md:right-0 after:flex after:absolute after:h-full after:w-full after:z-10 after:backdrop-blur-sm">
                 <div className="flex flex-col w-full gap-6 max-w-7xl mx-auto px-4 py-6 z-30">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 flex-1 w-full">
                         <div className="flex flex-col gap-6 w-full md:items-center md:justify-center">
                             <h1 className="flex flex-col h-fit w-full justify-center md:justify-start md:items-start font-extrabold text-center">
-                                <span className="text-4xl md:text-5xl">
+                                <span className="text-4xl lg:text-5xl">
                                     Master the Art of
                                 </span>
-                                <span className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                                <span className="text-4xl lg:text-5xl xl:text-7xl">
                                     <ShadowText
                                         className={
                                             "from-[#16a34a] to-neutral-700 font-extrabold"
@@ -51,8 +51,7 @@ const Hero = () => {
                                                 Get live Demo
                                             </DialogTitle>
                                             <DialogDescription>
-                                                Lorem ipsum dolor sit amet
-                                                consectetur adipisicing elit.
+                                                Fill details to get live demo
                                             </DialogDescription>
                                             <LeadForm />
                                         </DialogHeader>
