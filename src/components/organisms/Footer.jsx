@@ -57,9 +57,9 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <p className="text-center text-sm/6">
-                        &copy; {new Date().getFullYear()} Your Company, Inc. All
-                        rights reserved.
+                    <p className="text-center text-base md:text-lg lg:text-xl">
+                        &copy; {new Date().getFullYear()} The Trading Masters,
+                        Inc. All rights reserved.
                     </p>
                 </div>
             </div>
@@ -101,6 +101,14 @@ const NavItems = [
             {
                 label: "Contact Us",
                 link: "/contact-us",
+            },
+            {
+                label: "Privacy Policy",
+                link: "/privacy-policy",
+            },
+            {
+                label: "Refund & Cancellation",
+                link: "/refund-and-cancellation",
             },
         ],
     },
