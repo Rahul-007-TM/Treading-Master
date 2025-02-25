@@ -19,6 +19,7 @@ import {
     AccordionTrigger,
 } from "../ui/accordion";
 import { useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -27,8 +28,16 @@ const Navbar = () => {
         <div className="w-full">
             <div className="flex gap-4 w-full mx-auto max-w-7xl px-4 py-1">
                 <div className="flex flex-grow-0">
-                    <Link href={"/"}>
-                        <span className="text-4xl font-bold">LOGO</span>
+                    <Link
+                        href={"/"}
+                        className="flex w-full aspect-square h-10 relative"
+                    >
+                        <Image
+                            src={"/assets/logo/TM-logo.avif"}
+                            alt="The Trading Masters Logo"
+                            fill
+                            className="object-contain"
+                        />
                     </Link>
                 </div>
                 <div className="flex flex-grow justify-end items-center">

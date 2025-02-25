@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -7,7 +8,17 @@ const Footer = () => {
                 <div className="flex text-white flex-col w-full max-w-7xl items-center justify-center mx-auto px-4 gap-6 lg:gap-8 xl:gap-10 py-8 md:py-12 lg:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-full gap-6 max-w-7xl mx-auto">
                         <div className="flex w-full md:col-span-2">
-                            <span className="text-4xl font-bold">LOGO</span>
+                            <Link
+                                href={"/"}
+                                className="flex w-full aspect-square h-20 md:h-40 relative"
+                            >
+                                <Image
+                                    src={"/assets/logo/TM-logo.avif"}
+                                    alt="The Trading Masters Logo"
+                                    fill
+                                    className="object-contain object-left invert"
+                                />
+                            </Link>
                         </div>
                         <div className="flex flex-col gap-4 w-full">
                             <span className="text-lg text-primary">
