@@ -13,6 +13,12 @@ export const createLead = async ({ fullname, mobile, email, state }) => {
             },
             body: JSON.stringify({ fullname, mobile, email, state }),
         });
+
+        if (!res.ok) {
+            const errorData = await res.json();
+            throw new Error(errorData.message || 'Failed to create lead');
+        }
+
         const responseData = await res.json();
         await fetch(mailUrl, {
             method: "POST",
@@ -24,6 +30,7 @@ export const createLead = async ({ fullname, mobile, email, state }) => {
         return responseData;
     } catch (error) {
         console.error("Failed to add Lead:", error);
+        throw error;
     }
 }
 
