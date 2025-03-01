@@ -110,6 +110,10 @@ const NavItems = [
                 label: "Refund & Cancellation",
                 link: "/refund-and-cancellation",
             },
+            {
+                label: "Teams and conditions",
+                link: "/teams-and-conditions",
+            },
         ],
     },
 ];
