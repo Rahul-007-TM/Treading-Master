@@ -1,9 +1,9 @@
-"use server"
+import nodemailer from "nodemailer";
 
-import nodemailer from "nodemailer"
-
-export default async function POST(req, res) {
-    const { fullname, mobile, email, state } = req.body;
+export async function POST(request) {
+    // Parse the JSON body
+    const body = await request.json()
+    const { fullname, mobile, email, state } = body;
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -26,9 +26,19 @@ export default async function POST(req, res) {
 
     try {
         await transporter.sendMail(mailOptions);
-        res.status(200).json({ message: "Email sent successfully!" });
+        return new Response(JSON.stringify({ message: "Email sent successfully!" }), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
     } catch (error) {
         console.error("Error sending email:", error);
-        res.status(500).json({ message: "Failed to send email." });
+        return new Response(JSON.stringify({ message: "Failed to send email." }), {
+            status: 500,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
     }
 }

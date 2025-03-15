@@ -7,7 +7,7 @@ const page = () => {
         <div className="flex w-full h-auto md:items-center md:justify-center ">
             <div className="flex flex-col w-full max-w-7xl mx-auto px-4 gap-6 md:gap-8 lg:gap-12 xl:gap-16 py-8 md:py-12 lg:py-16">
                 <SectionHeading title="Teams and conditions" />
-                <div className="prose lg:prose-xl space-y-4 md:space-y-6 prose-p:text-base max-w-5xl mx-auto prose-p:text-justify md:prose-p:text-lg">
+                <div className="prose lg:prose-xl space-y-4 md:space-y-6 prose-p:text-sm md:prose-p:text-base max-w-5xl mx-auto lg:prose-p:text-lg">
                     <p>
                         Welcome to The Trading Masters. By accessing and using
                         our website (
@@ -68,8 +68,8 @@ const page = () => {
                     </p>
                     <p>
                         You understand and agree that The Trading Masters and/or
-                        its owner/proprietor/managers/employees/associates do
-                        not provide any assurance or guarantee of accuracy or
+                        its owner /proprietor /managers /employees /associates
+                        do not provide any assurance or guarantee of accuracy or
                         consistency of any of our research alerts/services. Any
                         accuracy level communicated to the user, whether in
                         written or verbal form or in our advertisements/website,
@@ -77,11 +77,10 @@ const page = () => {
                         and agree that the accuracy level/percentage of any of
                         our research services/alerts may vary from time to time
                         and there is no commitment from The Trading Masters
-                        and/or its
-                        owner/proprietor/managers/employees/associates to
-                        deliver research services/alerts with a fixed accuracy
-                        level/percentage. You recognize that you are fully
-                        responsible for the outcomes of any trades or
+                        and/or its owner /proprietor /managers /employees
+                        /associates to deliver research services/alerts with a
+                        fixed accuracy level/percentage. You recognize that you
+                        are fully responsible for the outcomes of any trades or
                         investments you make, whether they result in a gain or a
                         loss. You accept full responsibility for the performance
                         of all trades placed in your Demat account or trading

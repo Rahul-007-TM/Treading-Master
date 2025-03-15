@@ -6,7 +6,7 @@ const page = () => {
         <div className="flex w-full h-auto md:items-center md:justify-center ">
             <div className="flex flex-col w-full max-w-7xl mx-auto px-4 gap-6 md:gap-8 lg:gap-12 xl:gap-16 py-8 md:py-12 lg:py-16">
                 <SectionHeading title="Privacy Policy" />
-                <div className="prose lg:prose-xl space-y-4 md:space-y-6 prose-p:text-base max-w-5xl mx-auto prose-p:text-justify md:prose-p:text-lg">
+                <div className="prose lg:prose-xl space-y-4 md:space-y-6 prose-p:text-sm md:prose-p:text-base max-w-5xl mx-auto lg:prose-p:text-lg">
                     <p>
                         We may, if required by applicable law or regulations,
                         disclose the identity of the client to the issuer of
