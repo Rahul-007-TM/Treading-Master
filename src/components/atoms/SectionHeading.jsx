@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-const SectionHeading = ({ title, className }) => {
+const SectionHeading = ({ title, className, lineClassName }) => {
     return (
         <div className="flex flex-col gap-2 w-full">
             <h2
@@ -12,7 +12,12 @@ const SectionHeading = ({ title, className }) => {
             >
                 {title}
             </h2>
-            <span className="w-20 md:w-40 lg:w-60 bg-primary h-2 rounded-full mx-auto"></span>
+            <span
+                className={cn(
+                    "w-20 md:w-40 lg:w-60 bg-primary h-2 rounded-full mx-auto",
+                    lineClassName
+                )}
+            ></span>
         </div>
     );
 };
