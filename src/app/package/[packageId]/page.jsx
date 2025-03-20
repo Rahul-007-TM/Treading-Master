@@ -108,8 +108,7 @@ const page = async ({ params }) => {
                                             <DialogContent className="max-w-sm">
                                                 <DialogHeader>
                                                     <DialogTitle>
-                                                        Fill Details to contact
-                                                        us
+                                                        Submit Your Details
                                                     </DialogTitle>
                                                 </DialogHeader>
                                                 <LeadForm />
