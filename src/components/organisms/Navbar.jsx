@@ -26,21 +26,21 @@ const Navbar = () => {
 
     return (
         <div className="w-full">
-            <div className="flex gap-4 w-full mx-auto max-w-7xl px-4 py-1">
-                <div className="flex flex-grow-0">
+            <div className="flex gap-4 w-full mx-auto max-w-7xl justify-between px-4 py-1">
+                <div className="flex w-auto">
                     <Link
                         href={"/"}
-                        className="flex w-full aspect-square h-10 relative"
+                        className="flex w-[200px] h-10 md:h-14 relative"
                     >
                         <Image
-                            src={"/assets/logo/TM-logo.avif"}
+                            src={"/assets/logo/TM-Logo1.avif"}
                             alt="The Trading Masters Logo"
                             fill
-                            className="object-contain"
+                            className="object-contain object-left"
                         />
                     </Link>
                 </div>
-                <div className="flex flex-grow justify-end items-center">
+                <div className="flex w-fit justify-end items-center">
                     <ul className="hidden md:flex w-fit items-center gap-4 relative">
                         {NavItems.map((item, i) =>
                             item.data ? (
