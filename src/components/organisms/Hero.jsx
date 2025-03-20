@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ShadowText from "../atoms/ShadowText";
 import LeadForm from "../molecules/LeadForm";
 import { Button } from "../ui/button";
@@ -18,6 +19,16 @@ const Hero = () => {
                 <div className="flex flex-col w-full gap-6 max-w-7xl mx-auto px-4 py-6 z-30">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 flex-1 w-full">
                         <div className="flex flex-col gap-6 w-full md:items-center md:justify-center">
+                            <div className="hidden md:flex w-full">
+                                <div className="flex w-[200px] h-10 relative mx-auto md:mx-0">
+                                    <Image
+                                        src={"/assets/logo/TM-Logo1.avif"}
+                                        alt="The Trading Masters Logo"
+                                        fill
+                                        className="object-contain object-center md:object-left"
+                                    />
+                                </div>
+                            </div>
                             <h1 className="flex flex-col h-fit w-full justify-center md:justify-start md:items-start font-extrabold text-center">
                                 <span className="text-4xl lg:text-5xl">
                                     Master the Art of
@@ -75,7 +86,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         </>
     );
 };

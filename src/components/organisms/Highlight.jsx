@@ -7,13 +7,13 @@ const Highlight = () => {
         <div className="flex w-full h-auto md:items-center md:justify-center ">
             <div className="flex flex-col w-full max-w-7xl mx-auto px-4 gap-6 md:gap-8 lg:gap-12 xl:gap-16 py-8 md:py-12 lg:py-16">
                 <SectionHeading title="9 Golden rules for Trading in Stock Market" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
                     {Highlights.map((highlight, i) => (
                         <Card
                             key={i}
-                            className="hover:border-green-500 transition-all delay-200"
+                            className="border-4 hover:border-green-500 p-4 transition-all delay-200 shadow-2xl"
                         >
-                            <CardContent>
+                            <CardContent className="p-0">
                                 <div className="flex relative aspect-video w-full">
                                     <Image
                                         src={`/assets/highlights/${highlight.image}`}
@@ -23,13 +23,12 @@ const Highlight = () => {
                                     />
                                 </div>
                             </CardContent>
-                            <CardHeader>
-                                <CardTitle className="text-base text-center">
+                            <CardHeader className="p-0">
+                                <CardTitle className="text-sm md:text-base text-center">
                                     {highlight.label}
                                 </CardTitle>
                             </CardHeader>
                         </Card>
-
                     ))}
                 </div>
             </div>
@@ -71,9 +70,5 @@ const Highlights = [
     {
         image: "highlight-8.webp",
         label: "Don't be greedy",
-    },
-    {
-        image: "highlight-9.webp",
-        label: "Never take decision based on rumors",
     },
 ];
