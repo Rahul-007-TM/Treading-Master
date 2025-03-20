@@ -16,10 +16,10 @@ const Footer = () => {
                                 className="flex w-full aspect-square h-20 md:h-40 relative"
                             >
                                 <Image
-                                    src={"/assets/logo/TM-logo.avif"}
+                                    src={"/assets/logo/TM-white.avif"}
                                     alt="The Trading Masters Logo"
                                     fill
-                                    className="object-contain object-left invert"
+                                    className="object-contain object-left"
                                 />
                             </Link>
                         </div>
@@ -70,6 +70,7 @@ const Footer = () => {
                                         Phone Support :
                                     </span>
                                     <Link
+                                        type=""
                                         href="tel=+91 91195 43085"
                                         variant="ghost"
                                         className="px-2 py-2"
@@ -97,7 +98,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <p className="text-center text-base md:text-lg lg:text-xl">
+                    <p className="text-center text-base pb-6 md:text-lg lg:text-xl">
                         &copy; {new Date().getFullYear()} The Trading Masters,
                         Inc. All rights reserved.
                     </p>
