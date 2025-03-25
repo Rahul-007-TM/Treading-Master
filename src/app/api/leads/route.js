@@ -10,9 +10,9 @@ export async function POST(request) {
         await connectToMongoDB()
         await Lead.create({ fullname, mobile, email, state })
 
-        return NextResponse.json({ message: "Lead added Successfully and email sent" }, { status: 201 });
+        return NextResponse.json({ message: "Form Submitted Successfully" }, { status: 201 });
     } catch (error) {
-        console.error("Failed to add Lead or send email:", error);
+        console.error("Failed to Submit form:", error);
         return NextResponse.json({ message: "Failed to Create Lead", error: error.message }, { status: 500 });
     }
 }

@@ -71,7 +71,7 @@ const LeadForm = () => {
         await createLead(values)
             .then((result) => {
                 form.reset();
-                toast.success("Form Submitted Successfully");
+                toast.success(result.message);
                 setLoading(false);
             })
             .catch((err) => {
