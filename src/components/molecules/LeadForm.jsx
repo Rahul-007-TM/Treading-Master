@@ -67,17 +67,17 @@ const LeadForm = () => {
     });
 
     const onSubmit = async (values) => {
-        setLoading(true);
-        await createLead(values)
-            .then((result) => {
-                form.reset();
-                toast.success("Form Submitted Successfully");
-                setLoading(false);
-            })
-            .catch((err) => {
-                setLoading(false);
-                console.log(err);
-            });
+        try {
+            setLoading(true);
+            const result = await createLead(values);
+            form.reset();
+            toast.success(result.message);
+        } catch (err) {
+            console.error("Error creating lead:", err.message);
+            toast.error(err.message);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (

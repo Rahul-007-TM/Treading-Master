@@ -1,38 +1,38 @@
 "use server"
 
-const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3002"
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
 const apiUrl = baseUrl + "/api/leads";
-const mailUrl = baseUrl + "/api/mail";
 
 export const createLead = async ({ fullname, mobile, email, state }) => {
     try {
         const res = await fetch(apiUrl, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({ fullname, mobile, email, state }),
         });
 
         if (!res.ok) {
-            const errorData = await res.json();
-            throw new Error(errorData.message || 'Failed to create lead');
+            let errorMessage = 'Failed to create lead';
+
+            try {
+                const errorData = await res.json();
+                errorMessage = errorData.message || errorMessage;
+            } catch (jsonError) {
+                console.error("Error parsing JSON response:", jsonError);
+            }
+
+            throw new Error(errorMessage);
         }
 
-        const responseData = await res.json();
-        await fetch(mailUrl, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ fullname, mobile, email, state }),
-        });
-        return responseData;
+        return await res.json();
     } catch (error) {
-        console.error("Failed to add Lead:", error);
+        console.error("Failed to add Lead:", error.message);
         throw error;
     }
-}
+};
+
 
 export const getLeads = async () => {
     try {
