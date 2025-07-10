@@ -1,6 +1,6 @@
 "use server"
 
-const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"
+const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3002"
 const apiUrl = baseUrl + "/api/leads";
 const mailUrl = baseUrl + "/api/mail";
 
@@ -47,8 +47,7 @@ export const getLeads = async () => {
         }
         const data = await res.json();
         return {
-            ok: res.ok,
-            todos: data.todos,
+            todos: data.leads,
         };
     } catch (error) {
         console.error("Failed to Fetch Todos:", error);

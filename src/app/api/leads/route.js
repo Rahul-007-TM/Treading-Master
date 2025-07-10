@@ -3,7 +3,6 @@
 import { connectToMongoDB } from "@/db/mongodb"
 import Lead from "@/models"
 import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
 
 export async function POST(request) {
     try {
@@ -42,7 +41,8 @@ export async function POST(request) {
 export async function GET(request) {
     try {
         await connectToMongoDB();
-        const leads = await Lead.find();
+        const pipeline = [{ $sort: { createdAt: -1 } }]
+        const leads = await Lead.aggregate(pipeline);
 
         if (!leads || leads.length === 0) {
             return NextResponse.json({ message: "Leads List is Empty" }, { status: 200 });
