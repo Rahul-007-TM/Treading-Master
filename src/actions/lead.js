@@ -47,8 +47,7 @@ export const getLeads = async () => {
         }
         const data = await res.json();
         return {
-            ok: res.ok,
-            todos: data.todos,
+            todos: data.leads,
         };
     } catch (error) {
         console.error("Failed to Fetch Todos:", error);
